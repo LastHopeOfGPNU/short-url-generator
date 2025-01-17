@@ -114,13 +114,3 @@ class ShortURLGenerator:
         关闭数据库连接
         """
         self.conn.close()
-
-# 示例使用
-generator = ShortURLGenerator()
-original_url = "https://www.example.com/very/long/url/that/needs/to/be/shortened"
-short_url = generator.generate_short_url(original_url)
-retrieve_test = generator.get_original_url(short_url)
-assert retrieve_test == original_url
-print(f"Original URL: {original_url}")
-print(f"Short URL: {short_url}")
-generator.close()
